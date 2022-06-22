@@ -1,3 +1,4 @@
+//#include "/usr/include/c++/9/iostream" // caminho da lib no sistema
 #include <iostream> // Cabeçalho
 using namespace std; //Utilizando o namespace para utilizar as instruções cout e [endl]
 
