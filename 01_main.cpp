@@ -1,16 +1,8 @@
-//#include "/usr/include/c++/9/iostream" // caminho da lib no sistema
-#include <iostream> // Cabeçalho
-using namespace std; //Utilizando o namespace para utilizar as instruções cout e [endl]
+#include <iostream>
 
-// Primeira forma de comentário
-/*
- * Comentário
- * com
- * várias
- * linhas
- */
-
-int main(){
-    cout << "Hello, world!" << '\n';
-    return 0; // Toda função main deve retornar um int
+int main (int argc, char *argv[])
+{
+    std::cout << "Quantidade de parametros passados = " << argc << std::endl;
+    std::cout << "O primeiro argumento é: " << argv[0] << std::endl;
+    return 0;
 }
