@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 void loop_while( int );
 void loop_for( int );
@@ -7,7 +8,12 @@ void do_while( int );
 int main(){
     //loop_for( 15 );
     //loop_while( 10 );
-    do_while(10);
+    //do_while(10);
+    std::string herois[] = {"Iron Man", "Spider Man", "Capitão América"};
+    int total = sizeof(herois) / sizeof( herois[0] );
+    for (int i = 0; i < total; i++) {
+        std::cout << herois[i] << std::endl;
+    }
     return 0;
 }
 
