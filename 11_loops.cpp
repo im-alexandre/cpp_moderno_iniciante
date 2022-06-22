@@ -2,10 +2,12 @@
 
 void loop_while( int );
 void loop_for( int );
+void do_while( int );
 
 int main(){
-    loop_for( 15 );
-    loop_while( 10 );
+    //loop_for( 15 );
+    //loop_while( 10 );
+    do_while(10);
     return 0;
 }
 
@@ -37,4 +39,16 @@ void loop_while( int n ){
         i++;
         std::cout << '\n';
     }
+}
+void do_while( int n ){
+    int i = 1, j = 0;
+    do {
+        do {
+            std::cout << "*";
+            j++;
+        }while( j < i );
+        j = 0;
+        i++;
+        std::cout << '\n';
+    }while( i < n );
 }
