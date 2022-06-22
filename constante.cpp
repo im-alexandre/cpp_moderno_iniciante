@@ -7,8 +7,8 @@ int main ()
 {
     // Definindo constante à moda C++
     const float pi = 6.28;
-    //pi = 3.14; vai dar erro!
-    PI = 30;
+    //float pi = 3.14; vai dar erro!
+    //double PI = 30; Outro erro
     std::cout << "O valor de PI: " << PI << '\n';
     std::cout << "O valor de pi: " << pi << '\n';
     return 0;
