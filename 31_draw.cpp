@@ -5,22 +5,28 @@ void draw( int, int );
 
 int main( int argc , char **argv ){
 
-  int max_i = 10, max_kj = 20, x = {0};
+  int max_i = 2, max_kj = 4, x = {0}, y = {0};
   std::string s = {};
 
   if( argc > 1 ){
     s = argv[1]; 
+    max_i = std::stoi( argv[2] );
+    max_kj = std::stoi( argv[3] );
     if( s == "-a" || s == "--animation" ){
-      while( x < 40 ){
-        x++;
-        draw( x + 1, x + 1 );
+      while( x < max_i || y < max_kj){
+	if ( x < max_i ){
+	  x++;
+	}else if ( y < max_kj ){
+	  y++;
+	}
+	draw( x + 1, y + 1 );
         system("sleep 0.1");
         system("clear");
       }
     }
   }
 
-  if( argc > 2 ){
+  if( argc == 2 ){
     max_i = std::stoi( argv[1] );
     max_kj = std::stoi( argv[2] );
     draw( max_i ,  max_kj );
