@@ -19,7 +19,7 @@ int main( int argc , char **argv ){
 	}else if ( y < max_kj ){
 	  y++;
 	}
-	draw( x + 1, y + 1 );
+	draw( x , y );
         system("sleep 0.1");
         system("clear");
       }
