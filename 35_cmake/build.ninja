@@ -1,0 +1,11 @@
+rule cc
+  command = g++ -c -o $out $in
+  description = CC $out
+ 
+rule link
+  command = g++ -o $out $in
+  description = LINK $out
+ 
+build src1.o: cc main.cpp
+build src2.o: cc project.cpp
+build conversor: link src1.o src2.o
