@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * src/test/examples/testlibpq.c
  *
@@ -126,6 +127,24 @@ main(int argc, char **argv)
 
     /* close the connection to the database and cleanup */
     PQfinish(conn);
+=======
+#include <sqlite3.h>
+#include <iostream>
+
+int main (int argc, char *argv[])
+{
+    sqlite3 * DB;
+    bool connect = sqlite3_open("banco_dados.db", &DB);
+    
+    if (connect)
+    {
+        std::cerr << "Erro: " << sqlite3_errmsg(DB);
+        return 1;
+    }else{
+        std::cout << "Conectado com sucesso!" << std::endl;
+    }
+
+>>>>>>> -
 
     return 0;
 }
